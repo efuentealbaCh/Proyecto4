@@ -36,7 +36,7 @@ export default function LoginPage(){
             </div>
           </form>
           <form action="#" class="sign-up-form">
-            <h2 class="title">Cambiar Contraseña</h2>
+            <h2 class="title">Cambio Contraseña</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Nombre usuario" />
@@ -49,7 +49,7 @@ export default function LoginPage(){
               <i class="fas fa-lock"></i>
               <input type="new-password" placeholder="Repite la nueva contraseña" />
             </div>
-            <input type="submit" class="btn" value="Listo" />
+            <input type="submit" class="btn" value="Listo"  />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="/" class="social-icon">
@@ -78,10 +78,10 @@ export default function LoginPage(){
               Si no recuerdas tu contraseña o si necesitas cambiarla , sigue por aqui y te mostraremos donde puedes hacerlo .
             </p>
             <button class="btn transparent" id="sign-up-btn" onClick={change}>
-              Cambiar Contraseña
+              Cambio Contraseña
             </button>
           </div>
-          <img src={Logo} class="image" alt="" style={{position :"sticki", top:"0px",left:"0px"}} />
+          <img src={Logo} class="image" alt=""  />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -89,7 +89,7 @@ export default function LoginPage(){
             <p>
               Si ya eres parte y no necesitas un cambio , entonces te invitamos a ingresar a nuestro portal.
             </p>
-            <button class="btn transparent" id="sign-in-btn" >
+            <button class="btn transparent" id="sign-in-btn"  >
               Iniciar Sesión
             </button>
           </div>
