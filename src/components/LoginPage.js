@@ -1,8 +1,8 @@
 import React from 'react'
-import "./arround"
-import "./../App.css"
+import './../Styles/LoginPage.css'
 import Logo from "./../img/image2vector.svg"
-import change from "./arround"
+import change from './LogFunction'
+
 export default function LoginPage(){
     return(
     <div class="container">
@@ -77,11 +77,11 @@ export default function LoginPage(){
             <p>
               Si no recuerdas tu contraseña o si necesitas cambiarla , sigue por aqui y te mostraremos donde puedes hacerlo .
             </p>
-            <button class="btn transparent" id="sign-up-btn">
+            <button class="btn transparent" id="sign-up-btn" onClick={change}>
               Cambiar Contraseña
             </button>
           </div>
-          <img src={Logo} class="image" alt="" />
+          <img src={Logo} class="image" alt="" style={{position :"sticki", top:"0px",left:"0px"}} />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -89,13 +89,13 @@ export default function LoginPage(){
             <p>
               Si ya eres parte y no necesitas un cambio , entonces te invitamos a ingresar a nuestro portal.
             </p>
-            <button class="btn transparent" id="sign-in-btn">
+            <button class="btn transparent" id="sign-in-btn" >
               Iniciar Sesión
             </button>
           </div>
-          <img class="image" alt="" />
+          <img src ={Logo} class="image" alt="" />
         </div>
-      </div>
+      </div>    
     </div>
     )
 }
