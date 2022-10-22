@@ -2,6 +2,9 @@ import React from 'react'
 import './../Styles/LoginPage.css'
 import Logo from "./../img/image2vector.svg"
 import change from './LogFunction'
+import {Link } from "react-router-dom"
+
+
 
 export default function LoginPage(){
     return(
@@ -18,7 +21,9 @@ export default function LoginPage(){
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Contraseña" />
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <Link to ="/Home">
+              <input type="submit" value="Login" class="btn solid" />
+            </Link>
             <p class="social-text">Necesitas ayuda </p>
             <div class="social-media">
               <a href="/" class="social-icon" >

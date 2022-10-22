@@ -8,6 +8,7 @@ import Inscripcion from './containers/Inscripcion';
 import Documentos from './containers/Documentos';
 import InfoPersonal from './containers/InfoPersonal';
 import Contactos from './containers/Contactos';
+import InfoAcademica from './containers/InformacionAcademica';
 
 function App() {
   return (
@@ -15,11 +16,12 @@ function App() {
       <Routes>
         
         <Route path="/" element={<Sidebar/>}>
-          <Route  exact path  ="/Home" element={<Home/>}></Route>
+          <Route  exact path  ="/Home" name ="Home" element={<Home/>}></Route>
           <Route path ="/Solicitud" element={<Solicitud/>}></Route> 
           <Route path ="/Inscripcion" element ={<Inscripcion/>}></Route>
           <Route path="/Documentos" element={<Documentos/>}></Route>
           <Route path="/InfoPersonal" element={<InfoPersonal/>}></Route>
+          <Route path ="/InfoAcademica" element={<InfoAcademica/>}></Route>
           <Route path="/Contactos" element={<Contactos/>}></Route>
         </Route>
         <Route path ="/Login" element={<LoginPage/>}></Route>

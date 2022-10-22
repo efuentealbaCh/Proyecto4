@@ -1,17 +1,12 @@
-import React, { useState, useRef } from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 
+import React, { useState, useRef } from 'react';
 
 import { useSpring, animated } from 'react-spring';
-import {AwesomeButton} from 'react-awesome-button';
-import 'react-awesome-button/dist/themes/theme-blue.css';
 import Logo from './../img/image2vector.svg'
+import Acordeon from "./../components/AcordeonMenu"
 import './../Styles/Home.css'
 
-export default function Documentos() {
+export default function InfoAcademica() {
   return (
     <div className="main">
       
@@ -26,8 +21,7 @@ export default function Documentos() {
                 <div className="column">
                   
                   <Card>
-                  <img src={Logo} className="LogoMov" alt="" ></img>
-                  
+                    <img src={Logo} className="LogoMov" alt="" ></img>
                     <div className="card-title">{card.title}</div>
                     
                     <div className="card-body">{card.description}</div>
@@ -36,55 +30,12 @@ export default function Documentos() {
                 </div>
               ))}
             </div>
-
-            <Accordion>
-              <AccordionSummary
-                
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>Carrera</Typography>
-              </AccordionSummary> 
-              <AccordionDetails>
-                <Typography>
-                  Seleccione Carrera
-                  <select style={{width:"50%", height:"20%"}}></select>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                
-                aria-controls="panel2a-content"
-                id="panel2a-header"
-              >
-                <Typography>Seleccione Semestre</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                <select style={{width:"50%", height:"20%"}}></select>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion disabled>
-              <AccordionSummary
-                
-                aria-controls="panel3a-content"
-                id="panel3a-header"
-              >
-                
-              </AccordionSummary>
-            </Accordion>
-            <AwesomeButton classname ="Boton" type="primary">Certificado Alumno regular </AwesomeButton>
-            <AwesomeButton classname ="Boton" type="primary">Certificado Academico </AwesomeButton>
-            <AwesomeButton classname ="Boton" type="primary">Certificado Conducta </AwesomeButton>
-            <AwesomeButton classname ="Boton" type="primary">Certificado Permanencia </AwesomeButton>
-            <AwesomeButton classname ="Boton" type="primary">Convenio prestacion de servicios </AwesomeButton>
-            <AwesomeButton classname ="Boton" type="primary">Formulario de Apelación para Causal de Eliminación </AwesomeButton>
+            <Acordeon/>
           </div>
-          
         </Hero>
-        
+       
+      
+     
     </div>
   );
 }
@@ -194,12 +145,13 @@ function Image({ ratio, src }) {
 
 const cards = [
   {
-    title: 'Documentos' ,
+    title: 'Insformacion Academica ' ,
     description:
-      'Estimados/as estudiantes La Vicerrectoría Académica a través de la Dirección de Admisión y Registros Académicos en conjunto con la Dirección de Informática, tiene el agrado de comunicarles que contamos con un nuevo servicio de Firma Electrónica Avanzada, el cual permitirá brindarles una mejor atención y disminuir los tiempos de espera en lo que se requiere a solicitudes de certificados.',
+      'En este apartado puedes encontrar toda tu informacion academica , como tus notas parciales y asistencia a los ramos que tienes inscritos ademas de el historial academico con el avance curricular y mucho mas ... ',
       image: 'https://6jlvz1j5q3.csb.app/undraw_collection.svg',
     imageRatio: 784 / 1016
   }
+  
 ];
 
 

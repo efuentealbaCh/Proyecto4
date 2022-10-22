@@ -39,7 +39,7 @@ export default function Sidebar ()  {
             <NavLink exact to="/InfoPersonal" activeclassname="activeClicked">
               <CDBSidebarMenuItem icon="user">Informacion Personal</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/InfoPersonal" activeclassname="activeClicked">
+            <NavLink exact to="/InfoAcademica" activeclassname="activeClicked">
               <CDBSidebarMenuItem icon="fa-solid fa-info">Informacion Academica</CDBSidebarMenuItem>
             </NavLink>
 
