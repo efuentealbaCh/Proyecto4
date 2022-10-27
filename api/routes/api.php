@@ -1,9 +1,14 @@
 <?php
-
+//TODO: configuracion de backend
+//? dado que estamos usando laravel en backen modificamos el archivo api.php para
+//? realizar las consultas a la base de datos. Es importante importar el controlador
+//? para poder utilizar la funcionalidaes que programamos en el.
+//* los controladores se crean utilizando 'php artisan make:controler nombre_controlador'
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +23,7 @@ use App\Http\Controllers\UserController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/document',[DocsController::class,'imprimir']);
+//? en estas secciones creamos la ruta y la funcion que va a tener en base a un controlador
+Route::post('/document',[DocsController::class,'imprimir']);
+Route::post('/login',[LoginController::class,'Login']);
 Route::get('/user',[UserController::class, 'viewUser']);
